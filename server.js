@@ -25,11 +25,16 @@ app.set('view engine', 'pug'); //Asigna el motor de vistas
 app.use(methodOverride('_method'));
 
 //agregar las rutas a la aplicación
-app.use(session({
+let sessionConfig = {
     secret:['23lñwkjejqwekff', 'a2342mdslañdcn'],
     saveUninitialized: false,
     resave: false
-}));
+}
+if(process.env.NODE_ENV && process.env.NODE_ENV == 'production'){
+    sessionConfig['store'] = new (require('connect-pg-simple')(session))();
+}
+
+app.use(session(sessionConfig));
 
 app.use(authUserMiddleware);
 app.use(findUserMiddleware);
