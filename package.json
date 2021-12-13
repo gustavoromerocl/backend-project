@@ -1,0 +1,27 @@
+{
+  "name": "curso-profesional-de-backend",
+  "version": "1.0.0",
+  "description": "#HTTP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoromerocl/curso-profesional-de-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoromerocl/curso-profesional-de-backend/issues"
+  },
+  "homepage": "https://github.com/gustavoromerocl/curso-profesional-de-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
